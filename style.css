@@ -1,0 +1,73 @@
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  width: 190px;
+  padding: 15px;
+  margin: 0;
+  background-color: #212529; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.gradient-button {
+  /* The exact color match and direction */
+  /* background: linear-gradient(to bottom right, orange 0%, #ff4400 100%); */
+  /* background: linear-gradient(135deg, #e2e8f0 0%, #b9d2f3 100%) */
+  
+  /* Recommended styling to make the button look clean with this gradient */
+  color: #ffffff;          /* White text looks best on this bright background */
+  border: none;            /* Removes the default harsh browser border */
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+/* Optional: Slight fade effect when hovering to make it feel interactive */
+.gradient-button:hover {
+  opacity: 0.9;
+}
+button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px; /* Adds space between the paper icon and the text */
+  padding: 10px 14px;
+  background-color: #495057; 
+  color: #ffffff;
+  border: 1px solid #6c757d;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  width: 100%;
+  box-sizing: border-box;
+  transition: background-color 0.2s ease;
+}
+button:hover {
+  background-color: #6c757d; 
+}
+/* Controls the size of the inline SVG icon */
+.btn-icon {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+}
+
+/* The pulse animation */
+@keyframes flash-pulse {
+  0% {
+    background-color: #495057; /* Starting grey */
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.7);
+  }
+  20% {
+    background-color: #ffffff; /* Quick flash to pure white */
+    box-shadow: 0 0 0 8px rgba(255, 255, 255, 0.3); /* Ring expands out */
+  }
+  100% {
+    background-color: #495057; /* Fade back to grey */
+    box-shadow: 0 0 0 12px rgba(255, 255, 255, 0); /* Ring disappears */
+  }
+}
+
+/* The class that triggers the animation */
+.pulse-active {
+  animation: flash-pulse 0.35s ease-out;
+}
