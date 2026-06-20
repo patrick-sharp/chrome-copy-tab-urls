@@ -1,6 +1,6 @@
 {
   "manifest_version": 3,
-  "name": "Copy Selected Tab URLs",
+  "name": "Copy Tab URLs",
   "version": "1.1",
   "description": "Copies the URLs of all selected tabs to the clipboard, one per line.",
   "permissions": [

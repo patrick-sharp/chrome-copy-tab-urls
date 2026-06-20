@@ -1,3 +1,3 @@
 #! /usr/bin/env sh
 
-zip -r copy_selected_tab_urls.zip *
+zip -r copy_tab_urls.zip *
